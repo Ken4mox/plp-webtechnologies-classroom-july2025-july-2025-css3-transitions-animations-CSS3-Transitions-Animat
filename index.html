@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS & JavaScript Animation Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>CSS & JavaScript Interactive Demo</h1>
+      <p>Animations + Functions + Events</p>
+    </header>
+
+    <!-- ==============================
+         PART 1: CSS TRANSITIONS & ANIMATIONS
+    =============================== -->
+    <section class="card">
+      <h2>Part 1: CSS3 Transitions & Animations</h2>
+
+      <p>Hover over the button and the card to see transitions.</p>
+
+      <button class="btn animated-btn">
+        Hover Me
+      </button>
+
+      <div class="attention-box">
+        I gently pulse using a CSS keyframe animation.
+      </div>
+    </section>
+
+    <!-- ==============================
+         PART 2: JAVASCRIPT FUNCTIONS
+         (scope, parameters, return values)
+    =============================== -->
+    <section class="card">
+      <h2>Part 2: JavaScript Functions & Scope</h2>
+
+      <p>Use the controls below to change the score.</p>
+
+      <div class="score-row">
+        <label for="score-input">Amount to add/remove:</label>
+        <input type="number" id="score-input" value="5" />
+      </div>
+
+      <div class="score-row">
+        <button id="add-score-btn" class="btn small-btn">Add</button>
+        <button id="subtract-score-btn" class="btn small-btn">Subtract</button>
+        <button id="reset-score-btn" class="btn small-btn secondary">Reset</button>
+      </div>
+
+      <p>Current score: <span id="score-value">0</span></p>
+      <p id="score-message" class="info-text"></p>
+    </section>
+
+    <!-- ==============================
+         PART 3: CSS + JS TOGETHER
+         JS triggers CSS animations
+    =============================== -->
+    <section class="card">
+      <h2>Part 3: Combining CSS Animations with JavaScript</h2>
+
+      <p>Click the button to animate the box and open a modal.</p>
+
+      <div class="animation-controls">
+        <button id="animate-box-btn" class="btn">Animate Box</button>
+        <button id="toggle-modal-btn" class="btn secondary">
+          Toggle Modal
+        </button>
+      </div>
+
+      <div id="box" class="box">
+        Box
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal that slides/fades using CSS classes controlled by JS -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <h3>Hello from the modal</h3>
+      <p>This modal slides in and fades using CSS animations.</p>
+      <button id="close-modal-btn" class="btn small-btn secondary">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
